@@ -59,9 +59,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/web.loader.js";
       var config = {
-        dataUrl: buildUrl + "/web.data.br",
-        frameworkUrl: buildUrl + "/web.framework.js.br",
-        codeUrl: buildUrl + "/web.wasm.br",
+        dataUrl: buildUrl + "/web.data.gz",
+        frameworkUrl: buildUrl + "/web.framework.js.gz",
+        codeUrl: buildUrl + "/web.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "NeroBit",
         productName: "Astrover",
@@ -99,31 +99,13 @@
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
 
+
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
         canvas.style.width = "1920px";
         canvas.style.height = "1080px";
       }
-
-      // Function to maintain aspect ratio
-      function resizeCanvas() {
-        var aspectRatio = 16 / 9; // Set the desired aspect ratio
-        var containerWidth = window.innerWidth;
-        var containerHeight = window.innerHeight;
-
-        if (containerWidth / containerHeight > aspectRatio) {
-          canvas.style.width = containerHeight * aspectRatio + "px";
-          canvas.style.height = containerHeight + "px";
-        } else {
-          canvas.style.width = containerWidth + "px";
-          canvas.style.height = containerWidth / aspectRatio + "px";
-        }
-      }
-
-      // Add event listener to resize the canvas when the window is resized
-      window.addEventListener("resize", resizeCanvas);
-      resizeCanvas();
 
       loadingBar.style.display = "block";
 
